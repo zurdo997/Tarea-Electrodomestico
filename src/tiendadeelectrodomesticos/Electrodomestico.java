@@ -3,25 +3,29 @@ package tiendadeelectrodomesticos;
 @author Alan97
  */
 public class Electrodomestico {
+    //Constantes
+    private final static double PRECIO_POR_DEF = 100;
+    private final static String COLOR_POR_DEF = "blanco";
+    private final static char CONSUMO_POR_DEF = 'F';
+    private final static double PESO_POR_DEF = 5;
+    
+    //Atributos de la SuperClase
     private double precioBase;
     private String color;
     private char consumoEnergetico;
     private double peso;
-
+    
+    //Constructor por defecto
     public Electrodomestico() {
-        this.color = "blanco";
-        this.consumoEnergetico = 'c';
-        this.precioBase = 100;
-        this.peso = 5;
+        this(PRECIO_POR_DEF, COLOR_POR_DEF, CONSUMO_POR_DEF, PESO_POR_DEF);
     }
-
+    
+    //Constructor con dos parámetros el resto por defecto
     public Electrodomestico(double precioBase, double peso) {
-        this.precioBase = precioBase;
-        this.peso = peso;
-        this.color = "blanco";
-        this.consumoEnergetico = 'c';
+        this(precioBase, COLOR_POR_DEF, CONSUMO_POR_DEF, peso);
     }
-
+    
+    //Constructor con todos los atributos de la clase
     public Electrodomestico(double precioBase, String color, char consumoEnergetico, double peso) {
         this.precioBase = precioBase;
         this.color = color;
