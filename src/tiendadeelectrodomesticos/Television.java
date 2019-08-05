@@ -1,18 +1,24 @@
 package tiendadeelectrodomesticos;
+
 /*
  @author Alan97
  */
 public class Television extends Electrodomestico {
+
+    static final int RESOLUCION_POR_DEF = 20;
+    static final boolean SINTONIZADOR_POR_DEF = false;
+
     private int resolucion;
     private boolean sintonizadorTDT;
 
     public Television() {
-        this.resolucion = 20;
-        this.sintonizadorTDT = false;
+
     }
 
     public Television(double precioBase, double peso) {
-        super(precioBase, peso);
+        super(precioBase, COLOR_POR_DEF, CONSUMO_POR_DEF, peso);
+        this.resolucion = RESOLUCION_POR_DEF;
+        this.sintonizadorTDT = SINTONIZADOR_POR_DEF;
     }
 
     public Television(int resolucion, boolean sintonizadorTDT, double precioBase, String color, char consumoEnergetico, double peso) {
@@ -28,5 +34,16 @@ public class Television extends Electrodomestico {
     public boolean isSintonizadorTDT() {
         return sintonizadorTDT;
     }
-    
+
+    @Override
+    public double precioFinal() {
+        double aux = super.precioFinal();
+        if (this.resolucion > 40) {
+            aux += getPrecioBase() * 0.30;
+        }
+        if (sintonizadorTDT) {
+            aux += 50;
+        }
+        return aux;
+    }
 }
