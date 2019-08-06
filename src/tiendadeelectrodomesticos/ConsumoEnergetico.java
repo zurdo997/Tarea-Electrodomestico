@@ -1,8 +1,7 @@
 package tiendadeelectrodomesticos;
-/**
- *
- * @author Desarrollo Web
- */
+/*
+@author Alan97
+*/
 public enum ConsumoEnergetico {
     A(100), B(80), C(60), D(50), E(30), F(10);
     final private int PRECIO_POR_CONSUMO;

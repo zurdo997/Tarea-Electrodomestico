@@ -1,7 +1,7 @@
 package tiendadeelectrodomesticos;
 /*
 @author Alan97
- */
+*/
 public class TiendaDeElectrodomesticos {
 
     public static void main(String[] args) {
@@ -11,15 +11,15 @@ public class TiendaDeElectrodomesticos {
         double sumaDeLavadoras = 0;
         double sumaDeElectrodomesticos = 0;
         
-        misElectrodomesticos[0] = new Lavadora(35, 4505.50, "negro", 'A', 25);
+        misElectrodomesticos[0] = new Lavadora(4505.50, 25);
         misElectrodomesticos[1] = new Television(3560, 25);
         misElectrodomesticos[2] = new Lavadora();
-        misElectrodomesticos[3] = new Television(45, true, 2000.50, "blanco", 'C', 18);
+        misElectrodomesticos[3] = new Television(3000.50, 18);
         misElectrodomesticos[4] = new Lavadora(3600, 60);
         misElectrodomesticos[5] = new Television();
         misElectrodomesticos[6] = new Television(2500, 70);
         misElectrodomesticos[7] = new Electrodomestico(7000, 63);
-        misElectrodomesticos[8] = new Electrodomestico(9560.90, "gris", 'B', 34);
+        misElectrodomesticos[8] = new Electrodomestico(9560.90, 34);
         misElectrodomesticos[9] = new Lavadora(6000, 84);
 
         for (int i = 0; i < misElectrodomesticos.length; i++) {

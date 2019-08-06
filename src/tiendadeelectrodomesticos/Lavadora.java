@@ -1,7 +1,7 @@
 package tiendadeelectrodomesticos;
 /*
- @author Alan97
- */
+@author Alan97
+*/
 public class Lavadora extends Electrodomestico {
     static final int CARGA_POR_DEF = 5;
     

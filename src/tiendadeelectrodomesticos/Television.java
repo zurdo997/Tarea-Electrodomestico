@@ -1,8 +1,7 @@
 package tiendadeelectrodomesticos;
-
 /*
- @author Alan97
- */
+@author Alan97
+*/
 public class Television extends Electrodomestico {
 
     static final int RESOLUCION_POR_DEF = 20;
@@ -12,16 +11,18 @@ public class Television extends Electrodomestico {
     private boolean sintonizadorTDT;
 
     public Television() {
-
-    }
-
-    public Television(double precioBase, double peso) {
-        super(precioBase, COLOR_POR_DEF, CONSUMO_POR_DEF, peso);
+        super();
         this.resolucion = RESOLUCION_POR_DEF;
         this.sintonizadorTDT = SINTONIZADOR_POR_DEF;
     }
 
-    public Television(int resolucion, boolean sintonizadorTDT, double precioBase, String color, char consumoEnergetico, double peso) {
+    public Television(double precioBase, double peso) {
+        super(precioBase, peso);
+        this.resolucion = RESOLUCION_POR_DEF;
+        this.sintonizadorTDT = SINTONIZADOR_POR_DEF;
+    }
+
+    public Television(int resolucion, boolean sintonizadorTDT, double precioBase, Color color, char consumoEnergetico, double peso) {
         super(precioBase, color, consumoEnergetico, peso);
         this.resolucion = resolucion;
         this.sintonizadorTDT = sintonizadorTDT;

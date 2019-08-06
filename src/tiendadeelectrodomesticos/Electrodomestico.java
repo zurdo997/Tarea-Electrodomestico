@@ -1,8 +1,7 @@
 package tiendadeelectrodomesticos;
-
 /*
 @author Alan97
- */
+*/
 public class Electrodomestico {
 
     //Constantes
