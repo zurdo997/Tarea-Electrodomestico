@@ -1,7 +1,4 @@
 package tiendadeelectrodomesticos;
-
-import java.util.ArrayList;
-
 /*
 @author Alan97
  */
@@ -13,7 +10,7 @@ public class TiendaDeElectrodomesticos {
         double sumaDeTelevisores = 0;
         double sumaDeLavadoras = 0;
         double sumaDeElectrodomesticos = 0;
-
+        
         misElectrodomesticos[0] = new Lavadora(35, 4505.50, "negro", 'A', 25);
         misElectrodomesticos[1] = new Television(3560, 25);
         misElectrodomesticos[2] = new Lavadora();
