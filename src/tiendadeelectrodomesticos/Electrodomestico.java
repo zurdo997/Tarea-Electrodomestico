@@ -1,7 +1,8 @@
 package tiendadeelectrodomesticos;
-/*
-@author Alan97
-*/
+/**
+ * 
+ * @author Alan97
+ */
 public class Electrodomestico {
 
     //Constantes
@@ -16,7 +17,9 @@ public class Electrodomestico {
     protected ConsumoEnergetico consumoEnergetico; //clase Enum ConsumoEnergetico
     protected double peso;
 
-    //Constructor por defecto
+    /**
+     * Constructor por defecto
+     */
     public Electrodomestico() {
         this.precioBase = PRECIO_POR_DEF;
         this.color = COLOR_POR_DEF;
@@ -24,7 +27,12 @@ public class Electrodomestico {
         this.peso = PESO_POR_DEF;
     }
 
-    //Constructor con dos parámetros el resto por defecto
+    /**
+     * Constructor con dos parámetros el resto por defecto
+     * @param precioBase recibe el precio del electrodomestico
+     * @param peso recibe el peso del electrodomestico
+     * 
+     */
     public Electrodomestico(double precioBase, double peso) {
         this.precioBase = precioBase;
         this.peso = peso;
@@ -32,7 +40,13 @@ public class Electrodomestico {
         this.consumoEnergetico = CONSUMO_POR_DEF;
     }
 
-    //Constructor con todos los atributos de la clase
+    /**
+     * Constructor con todos los parámetros
+     * @param precioBase recibe el precio del electrodomestico
+     * @param color recibe el color del electrodomestico
+     * @param consumoEnergetico recibe el consumo energetico del electrodomestico
+     * @param peso recibe el peso del electrodomestico
+     */
     public Electrodomestico(double precioBase, Color color, char consumoEnergetico, double peso) {
         this.precioBase = precioBase;
         this.color = color;
@@ -40,15 +54,26 @@ public class Electrodomestico {
         this.peso = peso;
     }
 
-    //Getters
+    /**
+     * 
+     * @return retorna el precio del electrodomestico 
+     */
     public double getPrecioBase() {
         return precioBase;
     }
-
+    
+    /**
+     * 
+     * @return retorna el color del electrodomestico 
+     */
     public Color getColor() {
         return color;
     }
-
+    
+    /**
+     * 
+     * @return ConsumoEnergetico retorna el consumo energetico del electrodomestico 
+     */
     public ConsumoEnergetico getConsumoEnergetico() {
         return consumoEnergetico;
     }
@@ -74,6 +99,12 @@ public class Electrodomestico {
             this.consumoEnergetico = CONSUMO_POR_DEF;
         }
     }*/
+    
+    /**
+     * Este metodo es para comprobar el consumo
+     * @param letra es la letra para comprobar el consumo
+     * 
+     */
     private void comprobarConsumoEnergetico(char letra) {
         if (Character.toUpperCase(letra) < 'A' || Character.toUpperCase(letra) > 'F') {
             this.consumoEnergetico = CONSUMO_POR_DEF;
@@ -81,7 +112,11 @@ public class Electrodomestico {
             this.consumoEnergetico = Enum.valueOf(ConsumoEnergetico.class, Character.toString(letra));
         }
     }
-
+    
+    /**
+     * Este metodo es para comprobar el color del electrodomestico
+     * @param color es el color para comprobar el color
+     */
     private void comprobarColor(String color) {
         for (Color i : Color.values()) {
             if (i.name().equals(color.toUpperCase())) {
@@ -93,6 +128,10 @@ public class Electrodomestico {
         }
     }
 
+    /**
+     * 
+     * @return retorna el precio final del electrodomestico
+     */
     public double precioFinal() {
         return precioBase + this.consumoEnergetico.getPRECIO_POR_CONSUMO() + calcularPrecioPorPeso();
     }

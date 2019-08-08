@@ -1,7 +1,8 @@
 package tiendadeelectrodomesticos;
-/*
-@author Alan97
-*/
+/**
+ * 
+ * @author Alan97
+ */
 public class TiendaDeElectrodomesticos {
 
     public static void main(String[] args) {
