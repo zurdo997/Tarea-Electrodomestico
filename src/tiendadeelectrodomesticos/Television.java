@@ -40,7 +40,7 @@ public class Television extends Electrodomestico {
     public double precioFinal() {
         double aux = super.precioFinal();
         if (this.resolucion > 40) {
-            aux += getPrecioBase() * 0.30;
+            aux += this.precioBase * 0.30;
         }
         if (sintonizadorTDT) {
             aux += 50;
